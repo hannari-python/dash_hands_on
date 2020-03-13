@@ -7,7 +7,7 @@ import plotly.express as px
 
 # データの読み込み
 gapminder = px.data.gapminder()
-gapminder2007 = gapminder[gapminder["year"]==2007]
+gapminder2007 = gapminder[gapminder.year=="2007"]
 # Dashインスタンスの作成
 app = dash.Dash(__name__)
 
@@ -21,11 +21,16 @@ app.layout = html.Div([
         value="Japan"
     ),
     dcc.Graph(id="select_graph",
-    figure=px.scatter(gapminder2007, x="gdpPercap", y="lifeExp", size="pop", color="continent", log_x=True)
     )
 
 ])
 
+# コールバックの作成
+@app.callback(Output("select_graph", "figure"),
+            [Input("first-dropdown", "value")])
+def update_graph(selected_value):
+    dff = gapminder[gapminder["country"]==selected_value]
+    return px.line(dff, x="year", y="pop")
+
 if __name__ == "__main__":
     app.run_server(debug=True)
-
