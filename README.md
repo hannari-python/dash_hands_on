@@ -3,11 +3,12 @@
 ### ハンズオン用リポジトリ
 
 ```
-git clone https://github.com/hannari-python/dash_hands_on.git
-cd dash_hands_on
-pip install -r requirements.txt
+$ git clone https://github.com/hannari-python/dash_hands_on.git
+$ cd dash_hands_on
+$ python -m venv venv
+$ pip install -r requirements.txt
 もしくは
-pip install dash plotly pandas 
+$ pip install dash dash_daq plotly pandas 
 ```
 
 #### ファイルの実行

@@ -4,7 +4,6 @@ import dash_html_components as html
 import plotly.express as px 
 from dash.dependencies import Input, Output 
 
-import os 
 import json 
 
 gapminder = px.data.gapminder()

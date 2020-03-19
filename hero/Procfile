@@ -1,1 +1,0 @@
-web: gunicorn callback_graph3:app.server
