@@ -41,6 +41,6 @@ $ docker run --rm -it -v $(pwd):/work -P -p 8050:8050 dash-handson python first.
 ```
 
 ブラウザでアクセスするとDashのページが表示されます。
-[http://localhost:8050/](http://localhost:8050/)
+[http://0.0.0.0:8050/](http://0.0.0.0:8050/)
 
 
