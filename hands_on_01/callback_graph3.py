@@ -12,7 +12,12 @@ app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.H1("Gapminder Data"),
-    dcc.Graph(id="my_graph", figure=px.scatter(gapminder, x="gdpPercap", y="lifeExp", size="pop", log_x=True, log_y=True, color="continent", hover_data=["country"], animation_frame="year", size_max=80, template={"layout":{"clickmode": "event+select"}})),
+    dcc.Graph(id="my_graph", figure=px.scatter(gapminder, x="gdpPercap", y="lifeExp", size="pop", log_x=True, log_y=True, color="continent", hover_data=["country"], animation_frame="year", size_max=80, template={"layout":{"dragmode": "select"}})),
+
+    # ドラッグで選択 {"dragmode": "select"}
+    # クリックで選択 {"clickmode": "event+select"}
+
+
     dcc.Graph(id="show_data")
 ])
 
