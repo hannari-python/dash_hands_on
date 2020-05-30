@@ -14,7 +14,7 @@ $ pip install dash dash_daq plotly pandas
 #### ファイルの実行
 
 ```
-$ python first.py
+$ python ./hands_on_01/first.py
 ```
 
 ``http://127.0.0.1:8050/`` にアクセスすると、アプリケーションが見れます。
@@ -37,7 +37,9 @@ $ docker build -t dash-handson .
 Dockerコンテナを起動します。
 
 ```
-$ docker run --rm -it -v $(pwd):/work -P -p 8050:8050 dash-handson python first.py
+$ docker run --rm -it -v $(pwd):/work -P -p 8050:8050 dash-handson python ./hands_on_01/first.py
+(windows)
+$ docker run --rm -it -v "$(pwd):/work" -P -p 8050:8050 dash-handson python ./hands_on_01/first.py
 ```
 
 ブラウザでアクセスするとDashのページが表示されます。

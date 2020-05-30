@@ -20,6 +20,7 @@ app.layout = html.Div(
                 size="pop",
                 color="continent",
                 log_x=True,
+                animation_frame="year"
             )
         ),
     ]

@@ -20,7 +20,7 @@ app.layout = html.Div([
     dcc.Interval(
         id="update_tool",
     ),
-
+    
     dcc.Graph(
         id="realtime_graph"
     )
