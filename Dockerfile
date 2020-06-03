@@ -7,4 +7,4 @@ RUN mkdir /work
 WORKDIR /work
 
 RUN pip install --upgrade pip
-RUN pip install dash dash_daq plotly pandas
+RUN pip install dash dash_daq plotly pandas jupyter_dash jupyterlab
