@@ -16,8 +16,8 @@ app.layout = html.Div(
         dcc.Dropdown(
             id="mydropdown",
             options=[
-                {"label": f"{type.__name__}", "value": num}
-                for num, type in enumerate(graph_list)
+                {"label": f"{type_.__name__}", "value": num}
+                for num, type_ in enumerate(graph_list)
             ],
             value=0,
         ),
